@@ -47,6 +47,13 @@
     <div id="tab-tab1" class="tab-content" style="display:block;">
         <div class="tab-content-flex">
             <div class="title">
+                <div class="title-left">
+                    <div class="title-left-top">
+                        <div class="title-left-top-title"></div>
+                        <div class="title-left-top-line"></div>
+                    </div>
+                    <div class="title-left-bottom"></div>
+                </div>
                 <div class="slideshow-container">
                     <div class="my-slides my-slides-one active">
                         <img src="./assets/photo-img@2x.png" style="width:100%">
@@ -64,6 +71,10 @@
                         <span class="dot dot-one"></span>
                         <span class="dot dot-one"></span>
                     </div>
+                </div>
+                <div class="title-right">
+                    <div class="title-right-top"></div>
+                    <div class="title-right-bottom"></div>
                 </div>
             </div>
             <div class="service">
@@ -432,6 +443,7 @@
         padding-top: 40px;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     @media (max-width: 1200px) {
@@ -442,17 +454,38 @@
         }
     }
 
+    .title-left-top {
+        width: 300px;
+        height: 220px;
+        background: #005BB2;
+    }
+
+    .title-left-top-title {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .title-left-top-line {
+        width: 115px;
+        height: 1px;
+        border: 1px solid #80ADD9;
+    }
+
+    .title-left-bottom {
+        width: 300px;
+        height: 220px;
+        background: #005BB2;
+    }
+
     .slideshow-container {
         max-width: 585px;
         min-height: 264px;
         aspect-ratio: 585 / 440;
-        margin-right: 30px;
         position: relative;
     }
 
     @media (max-width: 1200px) {
         .slideshow-container {
-            margin-right: 0;
             margin-bottom: 12px;
         }
     }
@@ -495,6 +528,18 @@
         width: 12px;
         height: 12px;
         background-color: #0089FF;
+    }
+
+    .title-right-top {
+        width: 300px;
+        height: 220px;
+        background: #005BB2;
+    }
+
+    .title-right-bottom {
+        width: 300px;
+        height: 220px;
+        background: #005BB2;
     }
 
     .service {
