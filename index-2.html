@@ -465,16 +465,22 @@
     }
 
     .title-column {
-        width: 260px;
+        min-width: 260px;
         height: 1210px;
         margin-right: 16px;
         background: #FFFFFF;
     }
 
+    @media (max-width: 770px) {
+        .title-column {
+            min-width: 160px;
+        }
+    }
+
     .tab-left-title-item {
-        width: 260px;
+        width: 100%;
         height: 68px;
-        padding: 20px 40px;
+        padding: 0 40px;
         box-sizing: border-box;
         color: #333333;
         font-size: 20px;
@@ -482,6 +488,13 @@
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
+    }
+
+    @media (max-width: 770px) {
+        .tab-left-title-item {
+            padding: 0 20px;
+            font-size: 16px;
+        }
     }
 
     .tab-left-title-item-active {
@@ -513,6 +526,13 @@
         box-sizing: border-box;
         color: #7F7F7F;
         cursor: pointer;
+    }
+
+    @media (max-width: 770px) {
+        .tab-left-title-item-folder-item {
+            padding: 0 20px;
+            font-size: 16px;
+        }
     }
 
     .up-arrow {
@@ -548,10 +568,11 @@
     }
 
     .tab-left-content-title-row {
-        height: 68px;
+        min-height: 68px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     .search-input {
@@ -561,6 +582,12 @@
         box-sizing: border-box;
         border-radius: 0 0 5px 5px;
         border: 1px solid #DEE0E5;
+    }
+
+    @media (max-width: 873px) {
+        .search-input {
+            margin: 20px 0;
+        }
     }
 
     @media (max-width: 660px) {
@@ -608,6 +635,34 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+    }
+
+    @media (max-width: 1220px) {
+        .tab-left-content-text-item-title {
+            width: 600px;
+            font-size: 17px;
+        }
+    }
+
+    @media (max-width: 1080px) {
+        .tab-left-content-text-item-title {
+            width: 500px;
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 980px) {
+        .tab-left-content-text-item-title {
+            width: 400px;
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 880px) {
+        .tab-left-content-text-item-title {
+            width: 300px;
+            font-size: 14px;
+        }
     }
 
     .tab-left-content-text-date {
