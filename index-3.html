@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="header-right">
+                <div class="header-text">北京国际商会</div>
+                <div class="header-right-line"></div>
+                <div id="header-date" class="header-text"></div>
+                <div class="header-right-line"></div>
+                <div id="header-day" class="header-text"></div>
+            </div>
+        </div>
+    </div>
+    <div class="tab">
+        <div class="tab-title-content">
+            <div onclick="changeActive(event, 'tab-tab1', 'tab')" class="tab-title-item tab-title-item-active">首页
+            </div>
+            <div onclick="changeActive(event, 'tab-tab2', 'tab')" class="tab-title-item">商会概况
+            </div>
+            <div onclick="changeActive(event, 'tab-tab3', 'tab')" class="tab-title-item">会员风采
+            </div>
+            <div onclick="changeActive(event, 'tab-tab4', 'tab')" class="tab-title-item">商会动态
+            </div>
+            <div onclick="changeActive(event, 'tab-tab5', 'tab')" class="tab-title-item">加入商会
+            </div>
+            <div onclick="changeActive(event, 'tab-tab6', 'tab')" class="tab-title-item">商会资源
+            </div>
+            <div onclick="changeActive(event, 'tab-tab7', 'tab')" class="tab-title-item">商会服务
+            </div>
+            <div onclick="changeActive(event, 'tab-tab8', 'tab')" class="tab-title-item">联系我们
+            </div>
+        </div>
+    </div>
+    <div id="tab-tab1" class="tab-content" style="display:block;">
+        <div class="tab-content-flex">
+            <div class="title-column">
+                <div class="tab-left">
+                    <div onclick="changeActive(event, 'tab-left-tab1', 'tab-left')"
+                        class="tab-left-title-item tab-left-title-item-active">
+                        政策法规1
+                    </div>
+                    <div onclick="changeActive(event, 'tab-left-tab2', 'tab-left')" class="tab-left-title-item">政策法规2
+                    </div>
+                    <div onclick="changeActive(event, 'tab-left-tab3', 'tab-left')" class="tab-left-title-item">
+                        <div>政策法规3</div>
+                        <div class="up-arrow"></div>
+                    </div>
+                    <div class="tab-left-title-item-folder">
+                        <div class="tab-left-title-item-folder-item">
+                            政策法规1.1
+                        </div>
+                        <div class="tab-left-title-item-folder-item">
+                            政策法规1.2
+                        </div>
+                        <div class="tab-left-title-item-folder-item">
+                            政策法规1.3
+                        </div>
+                    </div>
+                    <div onclick="changeActive(event, 'tab-left-tab4', 'tab-left')" class="tab-left-title-item">
+                        <div>政策法规4</div>
+                        <div class="down-arrow"></div>
+                    </div>
+                    <div onclick="changeActive(event, 'tab-left-tab5', 'tab-left')" class="tab-left-title-item">政策法规5
+                    </div>
+                </div>
+            </div>
+            <div class="content-column">
+                <div id="tab-left-tab1" class="tab-left-content" style="display:block;">
+                    <div class="tab-left-content-flex">
+                        <div class="tab-left-content-title-row">
+                            <div class="flex ft16">
+                                <div>您所在的位置：首页&nbsp;>&nbsp;</div>
+                                <div class="blue-text pointer">政策法规</div>
+                            </div>
+                        </div>
+                        <div class="tab-left-content-line"></div>
+                        <div class="tab-left-content-text-area">
+                            <div class="tab-left-content-text-item">
+                                <div class="tab-left-content-text-item-title">
+                                    1111111111111111111111111111111111111111111111111111111
+                                </div>
+                                <div class="tab-left-content-text-date">
+                                    <div>2024-05-15</div>
+                                    <div class="tab-left-content-text-date-line"></div>
+                                    <div>广东国际商会</div>
+                                </div>
+                                <div class="tab-left-content-text-item-content">
+                                    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-left-tab2" class="tab-left-content" style="display:none;">
+                    <h3>标签页2内容</h3>
+                    <p>这是标签页2的内容。</p>
+                </div>
+                <div id="tab-left-tab3" class="tab-left-content" style="display:none;">
+                    <h3>标签页3内容</h3>
+                    <p>这是标签页3的内容。</p>
+                </div>
+                <div id="tab-left-tab4" class="tab-left-content" style="display:none;">
+                    <h3>标签页4内容</h3>
+                    <p>这是标签页4的内容。</p>
+                </div>
+                <div id="tab-left-tab5" class="tab-left-content" style="display:none;">
+                    <h3>标签页5内容</h3>
+                    <p>这是标签页5的内容。</p>
+                </div>
+                <div id="tab-tab6" class="tab-content" style="display:none;">
+                    <h3>标签页6内容</h3>
+                    <p>这是标签页6的内容。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tab-tab2" class="tab-content" style="display:none;">
+        <h3>标签页2内容</h3>
+        <p>这是标签页2的内容。</p>
+    </div>
+    <div id="tab-tab3" class="tab-content" style="display:none;">
+        <h3>标签页3内容</h3>
+        <p>这是标签页3的内容。</p>
+    </div>
+    <div id="tab-tab4" class="tab-content" style="display:none;">
+        <h3>标签页4内容</h3>
+        <p>这是标签页4的内容。</p>
+    </div>
+    <div id="tab-tab5" class="tab-content" style="display:none;">
+        <h3>标签页5内容</h3>
+        <p>这是标签页5的内容。</p>
+    </div>
+    <div id="tab-tab6" class="tab-content" style="display:none;">
+        <h3>标签页6内容</h3>
+        <p>这是标签页6的内容。</p>
+    </div>
+    <div id="tab-tab7" class="tab-content" style="display:none;">
+        <h3>标签页7内容</h3>
+        <p>这是标签页7的内容。</p>
+    </div>
+    <div id="tab-tab8" class="tab-content" style="display:none;">
+        <h3>标签页8内容</h3>
+        <p>这是标签页8的内容。</p>
+    </div>
+    <div class="bottom">
+        <div class="bottom-content">
+            <div class="bottom-column-one">
+                <div class="mb20 ft16">关于我们</div>
+                <div class="mb22 flex">
+                    <div class="phone-icon"></div>
+                    <div class="ft19 fw6">010-68058683</div>
+                </div>
+                <div class="mb14">通信地址：北京市西城区南礼士路头条三号</div>
+                <div class="mb14">客服邮箱：info@ccpitbj.org</div>
+                <div>邮编：100045</div>
+            </div>
+            <div class="bottom-line"></div>
+            <div class="bottom-column-two">
+                <div class="mb20 ft16">法律声明</div>
+                <div class="mb10">法律声明1</div>
+                <div class="mb10">法律声明1</div>
+                <div class="mb10">法律声明1</div>
+                <div class="mb10">法律声明1</div>
+                <div>法律声明1</div>
+            </div>
+            <div class="bottom-line"></div>
+            <div class="bottom-column-three">
+                <div class="mb20 ft16">联系我们</div>
+                <div class="mb10">法律声明1</div>
+                <div class="mb10">法律声明1</div>
+                <div>法律声明1</div>
+            </div>
+            <div class="bottom-line"></div>
+            <div class="align-center">
+                <div class="bottom-column-four">
+                    <div class="qrcode-1"></div>
+                    <div style="text-align: center;">官方微信</div>
+                </div>
+                <div class="bottom-column-five">
+                    <div class="qrcode-2"></div>
+                    <div style="text-align: center;">官方微博</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    getDate();
+    getTitles();
+
+    function getDate() {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = today.getMonth() + 1;
+        const day = today.getDate();
+        const dateEle = document.getElementById("header-date");
+        dateEle.innerText = `${year}年${month}月${day}日`;
+        const dayEle = document.getElementById("header-day");
+        const week = today.getDay();
+        const arr = ["日", "一", "二", "三", "四", "五", "六"];
+        dayEle.innerText = `星期${arr[week]}`;
+    }
+
+    function changeActive(event, tabName, className) {
+        let tabContent = document.getElementsByClassName(`${className}-content`);
+        for (let i = 0; i < tabContent.length; i++) {
+            tabContent[i].style.display = "none";
+        }
+        let tabs = document.getElementsByClassName(`${className}-title-item`);
+        for (let i = 0; i < tabs.length; i++) {
+            tabs[i].className = tabs[i].className.replace(` ${className}-title-item-active`, "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        event.currentTarget.className += ` ${className}-title-item-active`;
+    }
+
+    function getTitles() {
+        const url = 'https://jsonplaceholder.typicode.com/posts'
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementsByClassName('slider-right-content')[0];
+                const list = document.createElement('ul');
+                data = data.slice(0, 8);
+                data.forEach(item => {
+                    const listItem = document.createElement('li');
+                    const spanItem = document.createElement('span');
+                    const dateItem = document.createElement('span');
+                    spanItem.textContent = item.title;
+                    dateItem.textContent = "2024-05-14"
+                    listItem.appendChild(spanItem);
+                    listItem.appendChild(dateItem);
+                    list.appendChild(listItem);
+                });
+                container.innerHTML = '';
+                container.appendChild(list);
+            })
+    }
+</script>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        color: #333333;
+        font-size: 14px;
+        font-family: MicrosoftYaHei;
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: auto;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .align-center {
+        display: flex;
+        align-items: center;
+    }
+
+    .flex-wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .mb10 {
+        margin-bottom: 10px;
+    }
+
+    .mb14 {
+        margin-bottom: 14px;
+    }
+
+    .mb20 {
+        margin-bottom: 20px;
+    }
+
+    .mb22 {
+        margin-bottom: 22px;
+    }
+
+    .ft16 {
+        font-size: 16px;
+    }
+
+    .ft19 {
+        font-size: 19px;
+    }
+
+    .fw6 {
+        font-weight: 600;
+    }
+
+    .blue-text {
+        color: #1A5BBE
+    }
+
+    .pointer {
+        cursor: pointer;
+    }
+
+    .header {
+        width: 100%;
+        aspect-ratio: 1920 / 350;
+        background: url("./assets/head-background@2x.png");
+        background-size: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-content {
+        width: 1200px;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    @media (max-width: 1200px) {
+        .header-content {
+            width: 100%;
+        }
+    }
+
+    .header-right {
+        position: absolute;
+        top: 26px;
+        right: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    @media (max-width: 1200px) {
+        .header-right {
+            right: 20px;
+        }
+    }
+
+    @media (max-width: 530px) {
+        .header-right {
+            bottom: 6px;
+        }
+    }
+
+    .header-text {
+        font-size: 16px;
+        color: #3F83C4;
+    }
+
+    .header-right-line {
+        width: 1px;
+        height: 13px;
+        margin: 0 11px 0 9px;
+        border-right: 1px solid #FFFFFF;
+    }
+
+    .tab {
+        width: 100%;
+        height: 70px;
+        box-sizing: border-box;
+        background: #008CD6;
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (max-width: 1200px) {
+        .tab {
+            padding: 0;
+        }
+    }
+
+    .tab-title-content {
+        width: 1200px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    @media (max-width: 1200px) {
+        .tab-title-content {
+            width: 100%;
+        }
+    }
+
+    .tab-title-item {
+        min-width: 80px;
+        border-bottom: 6px solid transparent;
+        color: #FFFFFF;
+        font-size: 20px;
+        line-height: 26px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    @media (max-width: 646px) {
+        .tab-title-item {
+            min-width: 56px;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 452px) {
+        .tab-title-item {
+            min-width: 48px;
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 392px) {
+        .tab-title-item {
+            min-width: 40px;
+            font-size: 10px;
+        }
+    }
+
+    .tab-title-item-active {
+        border-bottom: 6px solid #FFFFFF;
+    }
+
+    .tab-content {
+        width: 100%;
+    }
+
+    .tab-content-flex {
+        width: 100%;
+        padding: 10px 0 20px 0;
+        box-sizing: border-box;
+        background: #F2F2F2;
+        background-size: 100% 600px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .title-column {
+        min-width: 260px;
+        height: 1210px;
+        margin-right: 16px;
+        background: #FFFFFF;
+    }
+
+    @media (max-width: 770px) {
+        .title-column {
+            min-width: 160px;
+        }
+    }
+
+    @media (max-width: 540px) {
+        .title-column {
+            min-width: 100px;
+        }
+    }
+
+    .tab-left-title-item {
+        width: 100%;
+        height: 68px;
+        padding: 0 40px;
+        box-sizing: border-box;
+        color: #333333;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    @media (max-width: 770px) {
+        .tab-left-title-item {
+            padding: 0 20px;
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 540px) {
+        .tab-left-title-item {
+            padding: 0 10px;
+            font-size: 14px;
+        }
+    }
+
+    .tab-left-title-item-active {
+        background: #E7F6EB;
+        color: #14A83B;
+        font-weight: 600;
+        position: relative;
+    }
+
+    .tab-left-title-item-active::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6px;
+        height: 100%;
+        background: #14A83B;
+    }
+
+    .tab-left-title-item-folder {
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tab-left-title-item-folder-item {
+        height: 48px;
+        padding: 10px 70px;
+        box-sizing: border-box;
+        color: #7F7F7F;
+        cursor: pointer;
+    }
+
+    @media (max-width: 770px) {
+        .tab-left-title-item-folder-item {
+            padding: 0 20px;
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 540px) {
+        .tab-left-title-item-folder-item {
+            padding: 0 10px;
+            font-size: 14px;
+        }
+    }
+
+    .up-arrow {
+        width: 13px;
+        height: 8px;
+        background: url("./assets/up-arrow@2x.png");
+        background-size: 100%;
+    }
+
+    .down-arrow {
+        width: 13px;
+        height: 8px;
+        background: url("./assets/down-arrow@2x.png");
+        background-size: 100%;
+    }
+
+    .content-column {
+        width: 924px;
+        height: 1210px;
+        background: #FFFFFF;
+    }
+    
+    @media (max-width: 1220px) {
+        .content-column {
+            width: calc(100% - 260px - 16px);
+        }
+    }
+
+    @media (max-width: 770px) {
+        .content-column {
+            width: calc(100% - 160px - 16px);
+        }
+    }
+
+    @media (max-width: 540px) {
+        .content-column {
+            width: calc(100% - 100px - 16px);
+        }
+    }
+
+    .tab-left-content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .tab-left-content-flex {
+        width: 100%;
+        height: 100%;
+        padding: 0 0 21px 24px;
+        box-sizing: border-box;
+    }
+
+    @media (max-width: 405px) {
+        .tab-left-content-flex {
+            padding: 0 5px 21px 10px;
+        }
+    }
+
+    .tab-left-content-title-row {
+        min-height: 68px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .tab-left-content-line {
+        margin-bottom: 20px;
+        margin-right: 19px;
+        border-bottom: 1px solid #DEE0E5;
+    }
+
+    .tab-left-content-text-area {
+        height: 100%;
+        margin-bottom: -20px;
+        padding: 0 13px 20px 6px;
+    }
+
+    @media (max-width: 405px) {
+        .tab-left-content-text-area {
+            padding: 0 0 20px 0;
+        }
+    }
+
+    .tab-left-content-text-item {
+        margin-bottom: 20px;
+        font-size: 18px;
+        line-height: 24px;
+        word-wrap: break-word;
+        cursor: pointer;
+    }
+
+    .tab-left-content-text-item-title {
+        width: 908px;
+        margin-bottom: 16px;
+        font-size: 24px;
+        color: #000000;
+        line-height: 31px;
+    }
+
+    @media (max-width: 1220px) {
+        .tab-left-content-text-item-title {
+            width: 800px;
+        }
+    }
+
+    @media (max-width: 1110px) {
+        .tab-left-content-text-item-title {
+            width: 700px;
+            font-size: 22px;
+        }
+    }
+
+    @media (max-width: 1030px) {
+        .tab-left-content-text-item-title {
+            width: 600px;
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 940px) {
+        .tab-left-content-text-item-title {
+            width: 500px;
+        }
+    }
+
+    @media (max-width: 830px) {
+        .tab-left-content-text-item-title {
+            width: 400px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .tab-left-content-text-item-title {
+            width: 350px;
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 590px) {
+        .tab-left-content-text-item-title {
+            width: 300px;
+        }
+    }
+
+    @media (max-width: 454px) {
+        .tab-left-content-text-item-title {
+            width: 250px;
+        }
+    }
+
+    .tab-left-content-text-date {
+        margin-bottom: 24px;
+        color: #ADADAD;
+        font-size: 12px;
+        line-height: 16px;
+        display: flex;
+    }
+
+    .tab-left-content-text-date-line {
+        margin: 0 8px 0 7px;
+        border-right: 1px solid #DEE0E5;
+    }
+
+    .tab-left-content-text-item-content {
+        font-size: 16px;
+        color: #000000;
+        line-height: 24px;
+    }
+
+    .bottom {
+        width: 100%;
+        height: 300px;
+        box-sizing: border-box;
+        background: #008CD6;
+        color: #FFFFFF;
+        font-size: 14px;
+        line-height: 21px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (max-width: 1220px) {
+        .bottom {
+            height: unset;
+            padding: 62px 0;
+        }
+    }
+
+    .bottom-content {
+        width: 1200px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    @media (max-width: 1220px) {
+        .bottom-content {
+            width: 100%;
+            padding: 0 20px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+
+    .bottom-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bottom-column-one {
+        margin-right: 164px;
+    }
+
+    @media (max-width: 1220px) {
+        .bottom-column-one {
+            margin-right: 40px;
+        }
+    }
+
+
+    .phone-icon {
+        width: 25px;
+        height: 22px;
+        margin-right: 11px;
+        background: #5C5C66;
+        opacity: 0.6;
+    }
+
+    .bottom-column-two,
+    .bottom-column-three {
+        margin-left: 29px;
+        margin-right: 140px;
+    }
+
+    @media (max-width: 1220px) {
+
+        .bottom-column-two,
+        .bottom-column-three {
+            margin-left: 0;
+            margin-right: 40px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .bottom-column-two {
+            margin-top: 49px;
+        }
+    }
+
+    @media (max-width: 554px) {
+        .bottom-column-three {
+            margin-top: 49px;
+        }
+    }
+
+    .bottom-column-four {
+        margin-left: 59px;
+        margin-right: 60px;
+        font-size: 16px;
+        align-items: center;
+    }
+
+    @media (max-width: 1220px) {
+        .bottom-column-four {
+            margin-left: 0;
+        }
+    }
+
+    @media (max-width: 794px) {
+        .bottom-column-four {
+            margin-top: 49px;
+        }
+    }
+
+    .bottom-column-five {
+        font-size: 16px;
+        align-items: center;
+    }
+
+    @media (max-width: 794px) {
+        .bottom-column-five {
+            margin-top: 49px;
+        }
+    }
+
+    .bottom-line {
+        height: 198px;
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    @media (max-width: 1220px) {
+        .bottom-line {
+            display: none;
+        }
+    }
+
+    .qrcode-1 {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 12px;
+        background: #FFFFFF;
+        background-size: 100%;
+    }
+
+    .qrcode-2 {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 12px;
+        background: #FFFFFF;
+        background-size: 100%;
+    }
+</style>
