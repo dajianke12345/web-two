@@ -28,9 +28,9 @@
             </div>
             <div onclick="toggleMenu('tab2')" class="tab-title-item">商会概况
                 <div id="tab2-menu" class="menu" style="display: none;">
-                    <a href="#">商会简介</a>
-                    <a href="#">商会章程</a>
-                    <a href="#">组织构成</a>
+                    <a href="scgk/scjj/">商会简介</a>
+                    <a href="scgk/sczc/">商会章程</a>
+                    <a href="shgk/zzgc/">组织构成</a>
                 </div>
             </div>
             <div onclick="changeActive(event, 'tab-tab3', 'tab')" class="tab-title-item">会员风采
@@ -41,20 +41,20 @@
             </div>
             <div onclick="toggleMenu('tab6')" class="tab-title-item">会员之窗
                 <div id="tab6-menu" class="menu" style="display: none;">
-                    <a href="#">会员动态</a>
-                    <a href="#">入会指引</a>
-                    <a href="#">会员权益</a>
-                    <a href="#">会员名录</a>
-                    <a href="#">会员推介</a>
+                    <a href="hyzc/hydt/">会员动态</a>
+                    <a href="rhzy/">入会指引</a>
+                    <a href="hyzc/hyqy/">会员权益</a>
+                    <a href="hyzc/hyml/">会员名录</a>
+                    <a href="hyzc/hytj/">会员推介</a>
                 </div>
             </div>
             <div onclick="toggleMenu('tab7')" class="tab-title-item">商会服务
                 <div id="tab7-menu" class="menu" style="display: none;">
-                    <a href="#">国际联络服务</a>
-                    <a href="#">市场拓展</a>
-                    <a href="#">商法服务</a>
-                    <a href="#">培训服务</a>
-                    <a href="#">资讯服务</a>
+                    <a href="scfw/gjllfw/">国际联络服务</a>
+                    <a href="shfw/sctz/">市场拓展</a>
+                    <a href="shfw/sffw/">商法服务</a>
+                    <a href="scfw/pxfw/">培训服务</a>
+                    <a href="shfw/zxfw/">资讯服务</a>
                 </div>
             </div>
             <div onclick="changeActive(event, 'tab-tab8', 'tab')" class="tab-title-item">联系我们
@@ -280,15 +280,13 @@
     }
 
     function toggleMenu(name) {
-        let menu = document.getElementById(`${name}-menu`);
+        let menu = document.getElementById(name + '-menu');
         if (menu.style.display === "none") {
             menu.style.display = "block";
             setTimeout(() => {
                 window.onclick = function (event) {
-                    if (!event.target.matches(`${name}-menu`)) {
-                        menu.style.display = "none";
-                        window.onclick = null;
-                    }
+                    menu.style.display = "none";
+                    window.onclick = null;
                 }
             }, 200)
         } else {
