@@ -233,6 +233,8 @@
     let slideOneIndex = 0;
     showSlides();
     getTitles();
+    window.onbeforeunload = onbeforeunloadHandler;
+    window.onload = onunloadHandler;
 
     function getDate() {
         const today = new Date();
@@ -299,6 +301,27 @@
                 container.appendChild(list);
             })
     }
+
+    function onbeforeunloadHandler() {
+        let scrollPos;
+        if (typeof window.pageYOffset != 'undefined') {
+            scrollPos = window.pageYOffset;
+        } else if (typeof document.compatMode != 'undefined' &&
+            document.compatMode != 'BackCompat') {
+            scrollPos = document.documentElement.scrollTop;
+        } else if (typeof document.body != 'undefined') {
+            scrollPos = document.body.scrollTop;
+        }
+        sessionStorage.setItem("scrollTop", scrollPos);
+    };
+
+    function onunloadHandler() {
+        if (sessionStorage.getItem('scrollTop') != null) {
+            let scrollTop = sessionStorage.getItem('scrollTop');
+            document.documentElement.scrollTop = parseInt(scrollTop);
+            document.body.scrollTop = parseInt(scrollTop);
+        }
+    };
 </script>
 
 <style>
