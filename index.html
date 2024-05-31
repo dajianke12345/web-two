@@ -24,17 +24,36 @@
         <div class="tab-title-content">
             <div onclick="changeActive(event, 'tab-tab1', 'tab')" class="tab-title-item tab-title-item-active">首页
             </div>
-            <div onclick="changeActive(event, 'tab-tab2', 'tab')" class="tab-title-item">商会概况
+            <div onclick="toggleMenu('tab2')" class="tab-title-item">商会概况
+                <div id="tab2-menu" class="menu" style="display: none;">
+                    <a href="#">商会简介</a>
+                    <a href="#">商会章程</a>
+                    <a href="#">组织构成</a>
+                </div>
             </div>
             <div onclick="changeActive(event, 'tab-tab3', 'tab')" class="tab-title-item">会员风采
             </div>
             <div onclick="changeActive(event, 'tab-tab4', 'tab')" class="tab-title-item">商会动态
             </div>
-            <div onclick="changeActive(event, 'tab-tab5', 'tab')" class="tab-title-item">加入商会
+            <div onclick="changeActive(event, 'tab-tab5', 'tab')" class="tab-title-item">通知公告
             </div>
-            <div onclick="changeActive(event, 'tab-tab6', 'tab')" class="tab-title-item">商会资源
+            <div onclick="toggleMenu('tab6')" class="tab-title-item">会员之窗
+                <div id="tab6-menu" class="menu" style="display: none;">
+                    <a href="#">会员动态</a>
+                    <a href="#">入会指引</a>
+                    <a href="#">会员权益</a>
+                    <a href="#">会员名录</a>
+                    <a href="#">会员推介</a>
+                </div>
             </div>
-            <div onclick="changeActive(event, 'tab-tab7', 'tab')" class="tab-title-item">商会服务
+            <div onclick="toggleMenu('tab7')" class="tab-title-item">商会服务
+                <div id="tab7-menu" class="menu" style="display: none;">
+                    <a href="#">国际联络服务</a>
+                    <a href="#">市场拓展</a>
+                    <a href="#">商法服务</a>
+                    <a href="#">培训服务</a>
+                    <a href="#">资讯服务</a>
+                </div>
             </div>
             <div onclick="changeActive(event, 'tab-tab8', 'tab')" class="tab-title-item">联系我们
             </div>
@@ -264,6 +283,23 @@
         slides[slideOneIndex - 1].style.display = "block";
         dots[slideOneIndex - 1].className += " active";
         setTimeout(showSlides, 2000); // 更新轮播间隔
+    }
+
+    function toggleMenu(name) {
+        let menu = document.getElementById(`${name}-menu`);
+        if (menu.style.display === "none") {
+            menu.style.display = "block";
+            setTimeout(() => {
+                window.onclick = function (event) {
+                    if (!event.target.matches(`${name}-menu`)) {
+                        menu.style.display = "none";
+                        window.onclick = null;
+                    }
+                }
+            }, 200)
+        } else {
+            menu.style.display = "none";
+        }
     }
 
     function changeActive(event, tabName, className) {
@@ -560,6 +596,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
         cursor: pointer;
     }
 
@@ -586,6 +623,48 @@
 
     .tab-title-item-active {
         border-bottom: 6px solid #FFFFFF;
+    }
+
+    .menu {
+        position: absolute;
+        top: 70px;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    @media (max-width: 646px) {
+        .menu {
+            min-width: 120px;
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 452px) {
+        .menu {
+            min-width: 100px;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 392px) {
+        .menu {
+            min-width: 80px;
+            font-size: 12px;
+        }
+    }
+
+    .menu a {
+        color: black;
+        padding: 12px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+    }
+
+    .menu a:hover {
+        background-color: #f1f1f1;
     }
 
     .tab-content {
@@ -1156,6 +1235,7 @@
     }
 
     @media (max-width: 1220px) {
+
         .bottom-column-two,
         .bottom-column-three {
             margin-left: 0;
